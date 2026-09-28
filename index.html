@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Pom</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/svg+xml" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+</head>
+<body>
+
+  <!-- SCREEN 1: Seat picking -->
+  <section id="seat-screen">
+    <div class="purse">$ <span id="balance"></span></div>
+
+    <div class="hero">
+      <div class="seat-card" data-seat="window">
+        <h3>Window Nook</h3>
+        <p>Rainy view · seats 1</p>
+        <button class="sit-btn">Sit down</button>
+      </div>
+
+      <div class="seat-card" data-seat="corner">
+        <h3>Corner Chair</h3>
+        <p>Quiet corner · seats 1</p>
+        <button class="sit-btn">Sit down</button>
+      </div>
+
+      <div class="seat-card" data-seat="long-table">
+        <h3>Long Table</h3>
+        <p>Bustling · seats 4</p>
+        <button class="sit-btn">Sit down</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 2: Coffee shop -->
+  <section id="shop-screen">
+    <h1>
+      <span id="focus-message">Take a seat to start focusing</span>
+    </h1>
+
+    <div class="shop-layout">
+
+      <!-- Menu -->
+      <div id="menu-panel">
+        <div class="menu-header">
+          <span class="pill open">
+            <span class="green">●</span> Open now
+          </span>
+          <h2><span id="menu-name">The</span> Menu</h2>
+        </div>
+
+        <p>Your spot's house special is $1 off.</p>
+
+        <div id="menu-list">
+          <div class="item" data-item="cinnamon-latte">
+            <img src="img/cinnamonlatte.jpg" alt="Cinnamon latte">
+            <div class="item-row">
+              <h3>Cinnamon Latte</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>warm &amp; spiced</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="matcha-latte">
+            <img src="img/matcha.jpg" alt="Matcha latte">
+            <div class="item-row">
+              <h3>Matcha Latte</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>grassy &amp; calm</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="cheese-cake">
+            <img src="img/cheesecake.jpg" alt="Cheesecake">
+            <div class="item-row">
+              <h3>Cheese Cake</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>creamy &amp; sweet</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="cinnamon-roll">
+            <img src="img/cinnamonroll.jpg" alt="Cinnamon roll">
+            <div class="item-row">
+              <h3>Cinnamon Roll</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>sticky glaze</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="lemonade">
+            <img src="img/lemonade.jpg" alt="Lemonade">
+            <div class="item-row">
+              <h3>Lemonade</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>refreshing</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="lemon-tarte">
+            <img src="img/tarte.jpg" alt="Lemon tart">
+            <div class="item-row">
+              <h3>Lemon Tarte</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>citrusy &amp; tangy</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="hot-chocolate">
+            <img src="img/hotchocolate.jpg" alt="Hot chocolate">
+            <div class="item-row">
+              <h3>Hot Chocolate</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>marshmallow peak</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="butter-croissant">
+            <img src="img/croissant.jpg" alt="Butter croissant">
+            <div class="item-row">
+              <h3>Butter Croissant</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>flaky &amp; buttery</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="blueberry-muffin">
+            <img src="img/muffin.jpg" alt="Blueberry muffin">
+            <div class="item-row">
+              <h3>Blueberry Muffin</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>warm</p>
+            </div>
+            <button>Order</button>
+          </div>
+
+          <div class="item" data-item="iced-coffee">
+            <img src="img/icedcoffee.jpg" alt="Iced coffee">
+            <div class="item-row">
+              <h3>Iced Coffee</h3>
+              <span class="pill"></span>
+            </div>
+            <div class="item-row">
+              <p>cream swirl</p>
+            </div>
+            <button>Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timer -->
+      <div id="timer-panel">
+
+        <div id="no-seat-message">
+          <h3>Pick a spot upstairs in the shop</h3>
+          <p>
+            Sit down and a timer appears on your table. Every minute
+            you stay focused earns a dollar in your purse — 10 things
+            on the menu to spend it on.
+          </p>
+        </div>
+
+        <div id="session-ui">
+          <div class="session-header">
+            <p id="seat-label"></p>
+
+            <div class="session-actions">
+              <button id="btn">
+                <span id="state">Start</span>
+              </button>
+              <button id="leave-btn">Leave seat</button>
+            </div>
+          </div>
+
+          <div class="timer-circle">
+            <span id="timer-display">25:00</span>
+          </div>
+
+          <div class="goal-card">
+            <label class="goal-label" for="goal-input">
+              Focusing on
+            </label>
+            <input
+              id="goal-input"
+              type="text"
+              placeholder="What are you working on?"
+            >
+          </div>
+
+          <div class="duration-options">
+            <button class="duration-btn" data-mins="15">
+              15 min · +$15
+            </button>
+            <button class="duration-btn" data-mins="25">
+              25 min · +$25
+            </button>
+            <button class="duration-btn" data-mins="50">
+              50 min · +$50
+            </button>
+          </div>
+
+          <div id="progress-section">
+            <div class="progress-header">
+              <span>Session progress</span>
+              <span id="progress-pct">0%</span>
+            </div>
+
+            <div class="progress-bar-track">
+              <div id="progress-bar-fill"></div>
+            </div>
+          </div>
+
+          <div id="table-area">
+            Nothing on the table yet — finish a session,
+            then order something from the menu.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>• Made with too much caffeine •</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
