@@ -24,7 +24,7 @@
 /* ============ GENERAL ============ */
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Fredoka", sans-serif;
   background-color: var(--bg);
 }
 
@@ -32,11 +32,12 @@ h1,
 h2,
 h3 {
   color: var(--text);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: 600;
   margin: 1rem 0.5rem;
 }
 
@@ -132,7 +133,7 @@ p {
   color: white;
   font-family: inherit;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -315,7 +316,7 @@ p {
   background: var(--accent);
   color: white;
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -408,14 +409,15 @@ p {
   color: var(--bg);
   font-family: inherit;
   font-size: 0.85rem;
-  font-weight: 600;
   cursor: pointer;
+    font-weight: 600;
 }
 
 #btn {
   margin-right: 0.5rem;
   background: var(--bg);
   color: var(--brown);
+  font-weight: 600;
 }
 
 .duration-options {
@@ -428,7 +430,6 @@ p {
 
 .duration-btn.selected {
   background: var(--accent);
-  font-weight: 700;
 }
 
 .item button:disabled,
@@ -439,7 +440,6 @@ p {
   cursor: not-allowed;
 }
 
-/* Dim the entire menu card when its purchase button is unavailable. */
 .item:has(button:disabled) {
   opacity: 0.5;
   cursor: not-allowed;
