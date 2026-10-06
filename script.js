@@ -114,11 +114,7 @@ function loadState() {
         Number.isFinite(parsed.balance) && parsed.balance >= 0
           ? parsed.balance
           : DEFAULT_STATE.balance,
-      ordered: Array.isArray(parsed.ordered)
-        ? parsed.ordered.filter((id) =>
-            MENU.some((item) => item.id === id)
-          )
-        : [],
+      ordered: [],
       session: {
         ...DEFAULT_STATE.session,
         ...parsed.session,
